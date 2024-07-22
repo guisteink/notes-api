@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,9 +35,5 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build --no-daemon
 
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Run tests with Gradle
         run: ./gradlew test --no-daemon
